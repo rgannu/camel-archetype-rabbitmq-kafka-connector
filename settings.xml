@@ -1,15 +1,29 @@
 <settings>
     <servers>
         <server>
-            <id>snapshot</id>
+            <id>snapshots</id>
             <username>${env.artifactory_user}</username>
             <password>${env.artifactory_password}</password>
         </server>
 
         <server>
-            <id>release</id>
+            <id>releases</id>
             <username>${env.artifactory_user}</username>
             <password>${env.artifactory_password}</password>
         </server>
     </servers>
+    <profiles>
+        <profile>
+          <id>artifactory</id>
+          <properties>
+              <altSnapshotDeploymentRepository>snapshots::default::https://artifactory.unifly.aero/artifactory/libs-snapshot-local</altSnapshotDeploymentRepository>
+              <altReleaseDeploymentRepository>releases::default::https://artifactory.unifly.aero/artifactory/libs-release-local</altReleaseDeploymentRepository>
+          </properties>
+        </profile>
+    </profiles>
+ 
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
 </settings>

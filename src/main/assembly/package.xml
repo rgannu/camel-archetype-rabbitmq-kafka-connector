@@ -50,11 +50,42 @@
       <useProjectArtifact>true</useProjectArtifact>
       <useTransitiveFiltering>true</useTransitiveFiltering>
       <excludes>
-        <exclude>org.apache.kafka:connect-api</exclude>
+        <exclude>org.apache.kafka:connect-json</exclude>
+        <exclude>org.apache.kafka:kafka-clients</exclude>
+
+        <exclude>org.apache.avro:avro</exclude>
+        <exclude>org.apache.commons:commons-compress</exclude>
         <exclude>com.google.protobuf:protobuf-java</exclude>
+
+        <exclude>org.slf4j:slf4j-api</exclude>
+
         <exclude>org.jetbrains.kotlin:kotlin-stdlib</exclude>
         <exclude>org.jetbrains.kotlin:kotlin-stdlib-common</exclude>
         <exclude>org.jetbrains.kotlin:kotlin-reflect</exclude>
+
+        <exclude>com.github.luben:zstd-jni</exclude>
+        <exclude>org.lz4:lz4-java</exclude>
+        <exclude>org.xerial.snappy:snappy-java</exclude>
+
+        <exclude>com.fasterxml.jackson.core:jackson-databind</exclude>
+        <exclude>com.fasterxml.jackson.core:jackson-core</exclude>
+        <exclude>com.fasterxml.jackson.datatype:jackson-datatype-jdk8</exclude>
+        <exclude>com.fasterxml.jackson.dataformat:jackson-dataformat-avro</exclude>
+
+        <exclude>io.apicurio:apicurio-registry-utils-converter</exclude>
+        <exclude>io.apicurio:apicurio-registry-utils-serde</exclude>
+        <exclude>io.apicurio:apicurio-registry-rest-client</exclude>
+        <exclude>io.apicurio:apicurio-registry-common</exclude>
+
+        <exclude>org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec</exclude>
+
+        <exclude>com.squareup.retrofit2:retrofit</exclude>
+        <exclude>com.squareup.retrofit2:converter-jackson</exclude>
+        <exclude>com.squareup.okhttp3:okhttp</exclude>
+        <exclude>com.squareup.okio:okio</exclude>
+
+        <exclude>com.worldturner.medeia:medeia-validator-jackson</exclude>
+        <exclude>com.worldturner.medeia:medeia-validator-core</exclude>
       </excludes>
     </dependencySet>
   </dependencySets>

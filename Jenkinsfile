@@ -1,9 +1,13 @@
 @Library('unifly-jenkins-common') _
 
-def MAVEN_PARAMS = "-U -B -e -fae -V  -Dmaven.compiler.fork=true "
+def MAVEN_PARAMS = "-U -B -e -fae -V -X -Dmaven.compiler.fork=true "
 
 pipeline {
     agent any
+
+    triggers {
+        cron '@weekly'
+    }
 
     options {
         buildDiscarder logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
@@ -24,7 +28,7 @@ pipeline {
 
         stage('Build & Package') {
             steps {
-                sh "./mvnw $MAVEN_PARAMS clean package"
+                sh "./mvnw $MAVEN_PARAMS clean install package"
             }
         }
 
