@@ -1,0 +1,2 @@
+= Camel Archetype RabbitMQ Kafka Connector
+
