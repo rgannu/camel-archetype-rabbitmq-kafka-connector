@@ -5,10 +5,6 @@ def MAVEN_PARAMS = "-U -B -e -fae -V -X -Dmaven.compiler.fork=true "
 pipeline {
     agent any
 
-    triggers {
-        cron '@weekly'
-    }
-
     options {
         buildDiscarder logRotator(artifactNumToKeepStr: '5', numToKeepStr: '10')
         disableConcurrentBuilds()
